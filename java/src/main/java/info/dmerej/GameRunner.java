@@ -3,7 +3,7 @@ package info.dmerej;
 import java.util.Random;
 
 
-public class GameRunner {
+public class GameRunner implements Runnable {
 
 	private static boolean notAWinner;
 
@@ -30,5 +30,10 @@ public class GameRunner {
 			
 		} while (notAWinner);
 		
+	}
+
+	@Override
+	public void run() {
+		this.main(new String[0]);
 	}
 }
